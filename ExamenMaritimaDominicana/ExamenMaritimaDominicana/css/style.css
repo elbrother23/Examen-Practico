@@ -1,0 +1,80 @@
+/* css reset - this code is used to overwrite the browser's default CSS style
+--------------------------------------------------------------- */
+html, body, div, span, a, dl, dt, dd, ol, ul, li
+{   margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+ol, ul {list-style: none;}
+
+/* .clearfix class - this is used to preserve the background on the floated child elements (i.e. li) and to bring the entire HTML block (i.e. ul) back on the normal flow of the page, removing the extra spacing that the browser may add
+--------------------------------------------------------------- */
+.clearfix:after {
+     visibility: hidden;
+     display: block; 
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: block; }
+
+
+/* general style
+--------------------------------------------------------------- */
+
+/* adds a suitable background on the body element in order to make the navgation stand out more*/
+body{background: url('../images/dark-bg.png') 0 0 repeat transparent;}
+
+
+/* horizontal menu style
+--------------------------------------------------------------- */
+
+/* .navigation class - sets the width and background of the navigation and centers the entire block; also adds some simple effects to improve the appearance (rounded corners, subtile white borders on top and bottom) */
+.navigation{width: 1200px; margin: 40px auto 0; background: url(../Imagen/nav-bg.png) 0 0 repeat-x transparent; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; border-radius: 5px;} 
+
+.navigation ul{} 
+
+/* .navigation ul li - floats the list items (buttons) to the left in order to avoid extra spacing */
+.navigation ul li{list-style-type: none; display: inline-block; float: left;} 
+
+/* .navigation ul li + li - adds some separators between the navigation's buttons; this rule has IE7+ support */
+.navigation ul li + li{background: url('../Imagen/nav-separator.png') 0 0 no-repeat transparent;} 
+
+/* .navigation ul li a - sets the proper padding, font size, family and color for the buttons */
+.navigation ul li a{padding: 25px 30px; text-decoration: none; color: #919191; display: block; font: normal 13px/16px Helvetica, Arial, sans-serif;} /* set the proper padding, font size, family and color for the buttons */
+
+/* .navigation ul li a:hover, .navigation ul li a.active - adds an overlay for the hover and active state of the buttons */
+.navigation ul li a:hover, .navigation ul li a.active{background: url('../Imagen/hover-state.png') 0 0 repeat transparent;} 
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* !!! */
+}
+
+.centered {
+   margin-top: -250px; margin-left: -200px;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 400px;
+}

@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="ExamenMaritimaDominicana.Pages.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Examen Practico Maritima</title>
+
+    <link rel="stylesheet" href="css/TableTemplates.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="navigation">
+		<ul class="clearfix"> <!--  clearing the floats that were used for the buttons  -->
+			<li><a href="/Pages/Master/PL/Home.aspx">Home</a></li>
+            <li><a href="/Pages/Registros/Solicitud/PL/CrearSolicitud.aspx">Crear Solicitud</a></li>
+			<li><a href="/Pages/Registros/AsignarTickets/PL/AsignarTicket.aspx">Asignar Tickets</a></li>
+            <li><a href="/Pages/Registros/Solicitud/PL/CerrarSolicitud.aspx">Cerrar Solicitud</a></li>			
+			<li><a href="/Pages/Usuarios/PL/Usuarios.aspx">Usuarios</a></li>
+            <li><a href="/Pages/Dashboard/PL/HistoricoSolicitudes.aspx">Historico de Solicitudes</a></li>
+            <li><a href="/Pages/Dashboard/PL/ListaSolicitudes.aspx">Listado de Solicitudes</a></li>
+		</ul>
+    </div>
+
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">           
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
